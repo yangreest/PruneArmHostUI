@@ -5,3 +5,5 @@
 /.vs
 /RunDir
 /Insulator_Zero_Value_Detection_Robot/x64
+/Insulator_Zero_Value_Detection_Robot/PruneArmHostUI/x64
+/Insulator_Zero_Value_Detection_Robot/RunDir/PruneArmHostUI.pdb

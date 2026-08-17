@@ -50,7 +50,8 @@ void Insulator_Zero_Value_Detection_Robot::InitParam()
 
 	// 获取设备信息
 
-	m_pComDevice = IDeviceCom::GetIDeviceCom(1);
+	// 串口通讯：配置中 Ip 字段为串口名（如COM3），Port 字段为波特率（如115200）
+	m_pComDevice = IDeviceCom::GetIDeviceCom(2);
 	m_pWHSDControlBoardProtocol = new CWHSDControlBoardProtocol(
 		m_pConfig->m_memControlBoardConfig.m_wDeviceHeartBeat);
 

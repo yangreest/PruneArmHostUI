@@ -81,10 +81,13 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\3rd\XCloud\include;D:\3rd\opencv_4_12_0\include;$(ProjectDir)serial;$(ProjectDir)serial\3rd_qextserialport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\3rd\XCloud\lib;D:\3rd\opencv_4_12_0\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>XCloudSDK.lib;opencv_world4120d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
@@ -95,6 +98,7 @@
       <ConformanceMode>true</ConformanceMode>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)serial;$(ProjectDir)serial\3rd_qextserialport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -108,16 +112,26 @@
     <QtUic Include="Config\XmlConfigManager.ui" />
     <QtUic Include="UI\Insulator_Zero_Value_Detection_Robot.ui" />
     <QtMoc Include="UI\Insulator_Zero_Value_Detection_Robot.h" />
+    <QtMoc Include="serial\serialworker.h" />
+    <QtMoc Include="serial\3rd_qextserialport\qextserialport.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
     <ClCompile Include="Camera\CameraBase.cpp" />
     <ClCompile Include="Camera\XCloud.cpp" />
     <ClCompile Include="Config\ConfigManager.cpp" />
     <ClCompile Include="Config\XmlManagerWindow.cpp" />
     <ClCompile Include="DeviceCom\IDeviceCom.cpp" />
+    <ClCompile Include="DeviceCom\SerialCom.cpp" />
     <ClCompile Include="DeviceCom\TcpClient.cpp" />
     <ClCompile Include="Log\ScanS_FC.cpp" />
     <ClCompile Include="Log\ScanS_WriteLog.cpp" />
     <ClCompile Include="Log\WriteLogIns.cpp" />
     <ClCompile Include="Protocol\WHSDControlBoradProtocol.cpp" />
+    <ClCompile Include="serial\serialdataqueue.cpp" />
+    <ClCompile Include="serial\serialworker.cpp" />
+    <ClCompile Include="serial\3rd_qextserialport\qextserialport.cpp" />
+    <ClCompile Include="serial\3rd_qextserialport\qextserialport_win.cpp" />
     <ClCompile Include="Tools\tinyxml2.cpp" />
     <ClCompile Include="Tools\Tools.cpp" />
     <ClCompile Include="Tools\XInputHelper.cpp" />
@@ -130,12 +144,17 @@
     <ClInclude Include="Config\ConfigManager.h" />
     <QtMoc Include="Config\XmlManagerWindow.h" />
     <ClInclude Include="DeviceCom\IDeviceCom.h" />
+    <ClInclude Include="DeviceCom\SerialCom.h" />
     <ClInclude Include="DeviceCom\TcpClient.h" />
     <ClInclude Include="Log\ScanS_FC.h" />
     <ClInclude Include="Log\ScanS_WriteLog.h" />
     <ClInclude Include="Log\WriteLogIns.h" />
     <ClInclude Include="Protocol\WHSDControlBoradProtocol.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="serial\serialdataqueue.h" />
+    <ClInclude Include="serial\serialportenumerator.h" />
+    <ClInclude Include="serial\3rd_qextserialport\qextserialport_global.h" />
+    <ClInclude Include="serial\3rd_qextserialport\qextserialport_p.h" />
     <ClInclude Include="Tools\tinyxml2.h" />
     <ClInclude Include="Tools\Tools.h" />
     <ClInclude Include="Tools\XInputHelper.h" />
