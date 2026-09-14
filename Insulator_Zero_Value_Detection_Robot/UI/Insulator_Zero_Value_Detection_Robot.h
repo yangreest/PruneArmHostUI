@@ -9,7 +9,7 @@
 #include "Protocol/WHSDControlBoradProtocol.h"
 #include "Tools/XInputHelper.h"
 #include "Camera/CameraBase.h"
-#include "Config/XmlManagerWindow.h"
+//#include "Config/XmlManagerWindow.h"
 #include <opencv2/opencv.hpp>
 
 class Insulator_Zero_Value_Detection_Robot : public QMainWindow
@@ -88,7 +88,7 @@ private:
 
 	CWHSDControlBoardProtocol* m_pWHSDControlBoardProtocol;
 
-	XmlManagerWindow* xmlManagerWindow;
+	//XmlManagerWindow* xmlManagerWindow;
 
 	std::mutex m_mutexDeviceInfoLock;
 

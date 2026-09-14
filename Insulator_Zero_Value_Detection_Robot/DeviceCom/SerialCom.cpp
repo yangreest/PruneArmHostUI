@@ -25,7 +25,7 @@ CSerialCom::~CSerialCom()
 void CSerialCom::SetParam(const char* pComName, int nBaudRate)
 {
 	m_strPortName = QString::fromLocal8Bit(pComName);
-	m_nBaudRate = nBaudRate;
+	//m_nBaudRate = nBaudRate;
 }
 
 void CSerialCom::RegisterReadDataCallBack(const std::function<void(uint8_t*, int, uint64_t)>& f)

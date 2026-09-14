@@ -360,7 +360,7 @@ QGroupBox QPushButton {
            <item>
             <widget class="QCheckBox" name="checkBox_3">
              <property name="text">
-              <string>无刷电机2</string>
+              <string>无刷电机1</string>
              </property>
             </widget>
            </item>

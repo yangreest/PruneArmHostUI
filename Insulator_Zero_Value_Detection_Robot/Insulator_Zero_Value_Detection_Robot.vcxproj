@@ -109,7 +109,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="UI\Insulator_Zero_Value_Detection_Robot.qrc" />
-    <QtUic Include="Config\XmlConfigManager.ui" />
     <QtUic Include="UI\Insulator_Zero_Value_Detection_Robot.ui" />
     <QtMoc Include="UI\Insulator_Zero_Value_Detection_Robot.h" />
     <QtMoc Include="serial\serialworker.h" />
@@ -120,7 +119,6 @@
     <ClCompile Include="Camera\CameraBase.cpp" />
     <ClCompile Include="Camera\XCloud.cpp" />
     <ClCompile Include="Config\ConfigManager.cpp" />
-    <ClCompile Include="Config\XmlManagerWindow.cpp" />
     <ClCompile Include="DeviceCom\IDeviceCom.cpp" />
     <ClCompile Include="DeviceCom\SerialCom.cpp" />
     <ClCompile Include="DeviceCom\TcpClient.cpp" />
@@ -142,7 +140,6 @@
     <ClInclude Include="Camera\CameraBase.h" />
     <ClInclude Include="Camera\XCloud.h" />
     <ClInclude Include="Config\ConfigManager.h" />
-    <QtMoc Include="Config\XmlManagerWindow.h" />
     <ClInclude Include="DeviceCom\IDeviceCom.h" />
     <ClInclude Include="DeviceCom\SerialCom.h" />
     <ClInclude Include="DeviceCom\TcpClient.h" />
